@@ -1,0 +1,12 @@
+repositories:
+  - name: crossplane-stable
+    url: https://charts.crossplane.io/stable
+
+releases:
+  - name: crossplane
+    chart: crossplane-stable/crossplane
+    namespace: crossplane-system
+    version: 1.6.1
+    installed: true
+    values:
+      - values.yaml

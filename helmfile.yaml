@@ -1,0 +1,5 @@
+helmfiles:
+  -
+    path: helmfile/argo-cd/helmfile.yaml
+  -
+    path: helmfile/crossplane/helmfile.yaml

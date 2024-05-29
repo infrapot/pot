@@ -1,0 +1,11 @@
+repositories:
+  - name: argo
+    url: https://argoproj.github.io/argo-helm
+
+# https://github.com/argoproj/argo-helm/blob/main/charts/argo-cd/README.md
+releases:
+  - name: argo-cd
+    chart: argo/argo-cd
+    namespace: argocd
+    version: 7.0.0
+    installed: true
