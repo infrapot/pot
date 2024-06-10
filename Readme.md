@@ -42,3 +42,13 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 ```
 
 Go to https://localhost:8080/ and login with username `admin` and the retrieved password.
+
+
+### Installing providers
+
+Visit `https://marketplace.upbound.io/providers` to get install provider you want to have. Make sure you don't install too much of them to avoid CRD overload. 
+
+#### Example - AWS
+
+Go to `https://marketplace.upbound.io/providers/upbound/provider-family-aws/v1.5.0`\
+

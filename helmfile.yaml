@@ -3,3 +3,10 @@ helmfiles:
     path: helmfile/argo-cd/helmfile.yaml
   -
     path: helmfile/crossplane/helmfile.yaml
+
+#releases:
+#  - name: provider-aws-s3
+#    chart: ./helm/crossplane-provider
+#    installed: true
+#    values:
+#      - version: 1.6.0

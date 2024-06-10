@@ -117,3 +117,18 @@ fabric.properties
 
 
 .idea/
+
+aws-credentials.txt
+
+
+cat <<EOF | kubectl apply -f -
+apiVersion: aws.crossplane.io/v1beta1
+kind: ProviderConfig
+metadata:
+  name: example
+spec:
+  credentials:
+    source: Filesystem
+    fs:
+      path: ./.aws/credentials
+EOF
