@@ -1,0 +1,13 @@
+repositories:
+  - name: argo
+    url: https://argoproj.github.io/argo-helm
+
+# https://github.com/argoproj/argo-helm/blob/main/charts/argo-workflows/README.md
+releases:
+  - name: argo-workflows
+    chart: argo/argo-workflows
+    namespace: argo
+    version: 0.40.14
+    installed: true
+    values:
+      - values.yaml

@@ -2,6 +2,8 @@ helmfiles:
   -
     path: helmfile/argo-cd/helmfile.yaml
   -
+    path: helmfile/argo-workflow/helmfile.yaml
+  -
     path: helmfile/crossplane/helmfile.yaml
 
 #releases:

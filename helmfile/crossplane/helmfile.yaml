@@ -1,21 +1,11 @@
 repositories:
-#  - name: crossplane-stable
-#    url: https://charts.crossplane.io/stable
   - name: upbound-stable
     url: https://charts.upbound.io/stable
 
 releases:
-#  - name: crossplane
-#    chart: crossplane-stable/crossplane
-#    namespace: crossplane-system
-#    version: 1.6.1
-#    installed: true
-#    values:
-#      - values.yaml
   - name: upx
     chart: upbound-stable/universal-crossplane
     namespace: upbound-system
     version: 1.16.0-up.1
     devel: true
     installed: true
-

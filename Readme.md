@@ -43,6 +43,20 @@ kubectl -n argocd get secret argocd-initial-admin-secret -o jsonpath="{.data.pas
 
 Go to https://localhost:8080/ and login with username `admin` and the retrieved password.
 
+#### Simple access to Argo Workflow
+
+Forward the service locally:
+```bash
+kubectl -n argo port-forward service/argo-workflows-server 2746:2746
+```
+
+Go to http://localhost:2746/ and login with e.g. [access token](https://argo-workflows.readthedocs.io/en/release-3.5/access-token/#access-token).
+
+### Installing caveats
+
+Pot is based on CRDs, which [cannot be updated with Helm](https://helm.sh/docs/chart_best_practices/custom_resource_definitions/#some-caveats-and-explanations).
+
+All updates should be performed manually for now.
 
 ### Installing providers
 
