@@ -1,5 +1,7 @@
 ## Pot
 
+Combine all necessary cloud management components in one single package.
+
 ### Installation
 
 The installation provides an easy way to configure the server as well as CLI with basic configuration to enable infrastructure management.
@@ -60,9 +62,16 @@ All updates should be performed manually for now.
 
 ### Installing providers
 
-Visit `https://marketplace.upbound.io/providers` to get install provider you want to have. Make sure you don't install too much of them to avoid CRD overload. 
+Visit `https://marketplace.upbound.io/providers` to get install provider you want to have. Make sure you don't install too much of them to avoid CRD overload.
 
 #### Example - AWS
 
-Go to `https://marketplace.upbound.io/providers/upbound/provider-family-aws/v1.5.0`\
-
+Add a below helm definition to `helmfile.yaml`:
+```yaml
+releases:
+  - name: provider-aws-s3
+    chart: ./helm/crossplane-provider
+    installed: true
+    values:
+      - version: 1.6.0
+```

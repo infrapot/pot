@@ -6,9 +6,9 @@ helmfiles:
   -
     path: helmfile/crossplane/helmfile.yaml
 
-#releases:
-#  - name: provider-aws-s3
-#    chart: ./helm/crossplane-provider
-#    installed: true
-#    values:
-#      - version: 1.6.0
+releases:
+  - name: provider-aws-s3
+    chart: ./helm/crossplane-provider
+    installed: true
+    values:
+      - version: 1.6.0
